@@ -1,0 +1,221 @@
+/*-- Special --*/
+
+.projects-info {
+  text-align: center;
+}
+
+.projects-info p {
+  color: #999999;
+  font-size: 0.9em;
+  margin: 1em auto 0;
+  width: 40%;
+}
+
+#owl-demo .item {
+  text-align: center;
+}
+
+.projects-agile-grid-info {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-agile-grid-info img {
+  width: 100%;
+}
+
+.projects-grid-caption h4 {
+  color: #fff;
+  font-size: 1.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(247, 45, 101, 0.44);
+  padding: 10px;
+  letter-spacing: 6px;
+}
+.projects-grid-caption i {
+  color: #fff;
+  font-size: 1.7em;
+  margin: 5em 0 0.5em 0;
+}
+
+.projects-grid-caption p {
+  color: #fff;
+  font-size: 1em;
+  margin: 0;
+  letter-spacing: 1px;
+  margin-top: 1em;
+}
+
+.projects-grid-caption {
+  background: rgba(0, 0, 0, 0.61);
+  padding: 8em 1em 1em 1em;
+  position: absolute;
+  left: 0;
+  bottom: -156%;
+  text-align: center;
+  width: 100%;
+  height: 493px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  border: 1px solid #999;
+}
+
+.projects-agile-grid-info:hover .projects-grid-caption {
+  bottom: -20%;
+}
+/*--flexisel--*/
+
+.flex-slider {
+  background: #222227;
+  padding: 70px 0 165px 0;
+}
+
+#flexiselDemo1 {
+  display: none;
+}
+
+.nbs-flexisel-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.nbs-flexisel-ul {
+  position: relative;
+  width: 9999px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.nbs-flexisel-inner {
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.nbs-flexisel-item {
+  float: left;
+  margin: 0;
+  padding: 0px;
+  position: relative;
+  line-height: 35px;
+}
+
+.nbs-flexisel-item > img {
+  cursor: pointer;
+  position: relative;
+}
+
+/*---- Nav ---*/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  background: url(../images/left.png) no-repeat 2px 1px;
+  top: -5% !important;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.nbs-flexisel-nav-left {
+  left: 92%;
+  display: none;
+}
+
+.nbs-flexisel-nav-right {
+  right: 3%;
+  background: url(../images/right.png) no-repeat 2px 1px;
+  display: none;
+}
+
+/*--//flexisel--*/
+
+/*-- Responsive design --*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .name_caroo {
+    color: blue;
+    background-color: violet;
+  }
+  .projects-grid-caption {
+    padding: 12em 1em 1em 1em;
+    bottom: -220%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .name_caroo {
+    color: blue;
+    background-color: red;
+  }
+  .projects-grid-caption {
+    padding: 12em 1em 1em 1em;
+    bottom: -230%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .name_caroo {
+    color: blue;
+    background-color: blue;
+  }
+
+  .projects-grid-caption {
+    padding: 13em 1em 1em 1em;
+    bottom: -256%;
+  }
+  .projects-grid-caption h4 {
+    letter-spacing: 3px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .name_caroo {
+    color: blue;
+    background-color: red;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .name_caroo {
+    color: blue;
+    background-color: green;
+  }
+  .projects-grid-caption {
+    padding: 12em 1em 1em 1em;
+    bottom: -210%;
+  }
+}
+@media only screen and (min-width: 1320px) {
+  .name_caroo {
+    color: red;
+    background-color: red;
+  }
+  .projects-grid-caption {
+    padding: 10em 1em 1em 1em;
+    bottom: -197%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .name_caroo {
+    color: blue;
+    background-color: blue;
+  }
+  .projects-grid-caption {
+    padding: 6em 1em 1em 1em;
+    bottom: -197%;
+  }
+}

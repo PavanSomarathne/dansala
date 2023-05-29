@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>VIP game at Dansala</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="./images/logo/logo.png" type="image/png">
+	<meta name="description"
+		content="VIP game at Dansala" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="PavanS" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Middle slider  -->
+	<link href="css/middle_slider.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- light box  -->
+	<link rel="stylesheet" href="css/lightbox.css" />
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="sass/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<!-- petals animation -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="./css/petals.css">
+
+	<script src="https://kit.fontawesome.com/da373a1c0b.js" crossorigin="anonymous"></script>
+	
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		/* Rating Star Widgets Style */
+		.rating-stars ul {
+			list-style-type: none;
+			padding: 0;
+
+			-moz-user-select: none;
+			-webkit-user-select: none;
+		}
+
+		.rating-stars ul>li.star {
+			display: inline-block;
+
+		}
+
+		/* Idle State of the stars */
+		.rating-stars ul>li.star>i.fa {
+			font-size: 1em;
+			/* Change the size of the stars */
+			color: #ccc;
+			/* Color on idle state */
+		}
+
+		/* Hover state of the stars */
+		.rating-stars ul>li.star.hover>i.fa {
+			color: #FFCC36;
+		}
+
+		/* Selected state of the stars */
+		.rating-stars ul>li.star.selected>i.fa {
+			color: #FF912C;
+		}
+
+		.img-container {
+			object-fit: cover;
+			width: 100%;
+			height: auto;
+		}
+
+		.istar {
+			color: #FF912C
+		}
+
+		/* new testimonial carousal */
+		#quote-carousel {
+			padding: 0 10px 30px 10px;
+			margin-top: 0px;
+		}
+
+		#quote-carousel .carousel-control {
+			background: none;
+			color: #CACACA;
+			font-size: 2.3em;
+			text-shadow: none;
+			margin-top: 30px;
+		}
+
+		#quote-carousel .carousel-indicators {
+			position: relative;
+			right: 50%;
+			top: auto;
+			bottom: 0px;
+			margin-top: 20px;
+			margin-right: -19px;
+		}
+
+		#quote-carousel .carousel-indicators li {
+			color: crimson;
+
+			width: 10px;
+			height: 10px;
+			cursor: pointer;
+			border: 2px solid crimson;
+			box-shadow: 0 0 5px rgba(97, 72, 72, 0.185);
+			border-radius: 50%;
+			opacity: 0.4;
+			overflow: hidden;
+			transition: all .4s ease-in;
+			vertical-align: middle;
+		}
+
+		#quote-carousel .carousel-indicators .active {
+			width: 20px;
+			height: 20px;
+			border: 4px solid crimson;
+			border-radius: 50%;
+			opacity: 1;
+			transition: all .2s;
+		}
+
+		.test_name {
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		.item blockquote {
+			border-left: none;
+			margin: 0;
+			font-size: 1.2em;
+		}
+
+		.item blockquote p:before {
+			content: "\f10d";
+			font-family: 'Fontawesome';
+			font-size: 0.7em;
+			float: left;
+
+		}
+
+		.item blockquote p::after {
+			content: "\f10e";
+			font-family: 'Fontawesome';
+			font-size: 0.7em;
+			float: right;
+
+		}
+	</style>
+	<style>
+		/* Testimonial form responsive*/
+		/* Extra small devices (phones, 600px and down) */
+		@media only screen and (max-width: 600px) {
+			#testimonials {
+
+				background-color: seashell;
+				padding-top: 3%;
+				padding-bottom: 3%;
+			}
+
+		}
+
+		/* Small devices (portrait tablets and large phones, 600px and up) */
+		@media only screen and (min-width: 600px) {
+			#testimonials {
+				background-color: seashell;
+				padding-top: 3%;
+				padding-bottom: 3%;
+			}
+
+		}
+	</style>
+	<style>
+		.pageclip-form__success {
+			width: 100%;
+			height: 95%;
+		}
+		.submitted-view {
+			padding-top: 100px !important;
+			display: none;
+		}
+		.winning-text{
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: green;
+		}
+		.pending-text{
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: orange;
+		}
+
+		#logo path:nth-child(1) {
+			stroke-dasharray: 565.3395385742188;
+			stroke-dashoffset: 565.3395385742188;
+			animation: line-anim 5s ease forwards infinite alternate;
+		}
+
+		#logo path:nth-child(2) {
+			stroke-dasharray: 291.1070251464844;
+			stroke-dashoffset: 291.1070251464844;
+			animation: line-anim 5s ease forwards infinite alternate;
+		}
+
+		#logo path:nth-child(3) {
+			stroke-dasharray: 285.379150390625;
+			stroke-dashoffset: 285.379150390625;
+			animation: line-anim 5s ease forwards infinite alternate;
+		}
+
+		#logo path:nth-child(4) {
+			stroke-dasharray: 368.7459716796875;
+			stroke-dashoffset: 368.7459716796875;
+			animation: line-anim 5s ease forwards infinite alternate;
+		}
+
+		#logo path:nth-child(5) {
+			stroke-dasharray: 537.9614868164062;
+			stroke-dashoffset: 537.9614868164062;
+			animation: line-anim 5s ease forwards infinite alternate;
+		}
+
+		#logo path:nth-child(6) {
+			stroke-dasharray: 373.5615539550781;
+			stroke-dashoffset: 373.5615539550781;
+			animation: line-anim 5s ease forwards infinite alternate;
+		}
+
+		@keyframes line-anim {
+			to {
+				stroke-dashoffset: 0;
+			}
+
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="fh5co-loader"></div>
+	<audio id="music" loop autoplay>
+		<source src="./assets/background_music.mp">
+	</audio>
+
+	<div id="page">
+		<nav class="fh5co-nav" role="navigation" style="position: fixed;background-image:url(images/back8.png);">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4">
+						<div id="fh5co-logo"><a href="index.html">Dansala</a></div>
+					</div>
+					<div class="col-xs-8 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">Donations</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+
+		<div id="fh5co-counter" class="fh5co-bg fh5co-counter" >
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<span>Best Wishes</span>
+						<h2>Best Wishes</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-12 col-sm-12" id="testimonials">
+						<form id="testimonialForm" action="" method="post" style="overflow: auto;">
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="name" class="sr-only">Name</label>
+									<input type="name" name="Name" class="form-control" id="name_test"
+										placeholder="Name" required>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="MobileNo" class="sr-only">Mobile No</label>
+									<input type="tel" name="MobileNo" class="form-control" id="mobile_test"
+										placeholder="Mobile No" required>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="cameFrom" class="sr-only">Came from</label>
+									<input type="text" name="CameFrom" class="form-control" id="came_test"
+										placeholder="Came from" required>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 ">
+								<div class="form-group m-0">
+									<label for="NoOfMem" class="sr-only">No of Members</label>
+									<input type="number" name="NoOfMem" class="form-control" id="members_test"
+										placeholder="No of Members" required>
+								</div>
+							</div>
+							<div class="col-xs-4  col-sm-4 col-md-3 ">
+							</div>
+							<div class="col-xs-4 col-sm-6 col-md-6 col-sm-6 padding-bottom-5">
+								<button type="submit" class="btn btn-default "><span>Submit</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="fh5co-couple-story" class="submitted-view">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<span>Your request has been submitted</span>
+						<h2 id="cus_name">Hi, </h2>
+						<p>If your status is green, Please visit the counter, if not your patience is highly appreciated</p>
+					</div>
+				</div>
+				<div class="row">
+					<div id="accepted" class="winning-text">Accepted</div>
+					<div id="pending" class="pending-text">Pending</div>
+				</div>
+			</div>
+		</div>
+		<div id="fh5co-testimonial">
+			<div class="container">
+				<div class="row">
+					<div class="row animate-box">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+							<span>Best Wishes</span>
+							<h2>Winners</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-9">
+									<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+
+										<!-- Carousel Slides / Quotes -->
+										<div class="carousel-inner text-center" id="carooo">
+
+											<!-- <div class="item ">
+												<blockquote>
+													<div class="row">
+														<div class="col-sm-8 col-sm-offset-2">
+															<p> Edureka has the best online courses!s </p>
+															<div id="" text-center'>
+																<i class='fa fa-star' style="color: yellow;"></i>
+																<i class='fa fa-star'></i>
+																<i class='fa fa-star'></i>
+																<i class='fa fa-star'></i>
+																<i class='far fa-star'></i>
+															
+															</div>
+															<small> Reviewer's Name </small>
+														</div>
+													</div>
+												</blockquote>
+											</div>
+										 -->
+										</div>
+										<!-- Bottom Carousel Indicators -->
+										<ol class="carousel-indicators" id="carooo_indicaters">
+											<!-- <li data-target="#quote-carousel" data-slide-to="0" class="active">
+											</li> -->
+
+										</ol>
+
+										<!-- Carousel Buttons Next/Prev -->
+										<!-- <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i
+												class="fa fa-chevron-left"> </i> </a>
+										<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i
+												class="fa fa-chevron-right"></i></a> -->
+									</div>
+								</div>
+								
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="container">
+				<div class="row copyright">
+					<div class="col-md-12 text-center">
+						<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- light box -->
+	<script src="js/lightbox.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	
+
+	<script>
+		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+
+		// default example
+		simplyCountdown('.simply-countdown-one', {
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate()
+		});
+
+		//jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: d.getFullYear(),
+			month: d.getMonth() + 1,
+			day: d.getDate(),
+			enableUtc: false
+		});
+
+		//light box onclick
+		$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+			event.preventDefault();
+			$(this).ekkoLightbox({
+			});
+		});
+	</script>
+	<script>
+		document.getElementById('music').volume = 0.4;
+		var muteButton = document.getElementsByClassName('mute');
+		document.addEventListener('click', musicPlay);
+
+
+		function mutePlay() {
+
+
+			if (document.getElementById('music').paused) {
+				document.getElementById('music').play();
+				document.getElementById("mute-icon").className = "icon-pause";
+			} else if (!document.getElementById('music').paused) {
+				document.getElementById('music').pause()
+				document.getElementById("mute-icon").className = "icon-play";
+			}
+
+		}
+		function musicPlay() {
+
+			document.getElementById('music').play();
+			document.getElementById('music').volume = 0.4;
+			document.removeEventListener('click', musicPlay);
+		}
+
+
+
+	</script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+	<script src="./js/petals.js"></script>
+	<!-- middle slider -->
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 414,
+						visibleItems: 1
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 768,
+						visibleItems: 3
+					},
+					others: {
+						changePoint: 1080,
+						visibleItems: 4
+					}
+				}
+			});
+
+		});
+	</script>
+	<script src="js/jquery.flexisel.js"></script>
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyDHMHUs6idkZLoH1Sc5T3nzQIYbj2Uo9N0",
+			authDomain: "flickz-91f5b.firebaseapp.com",
+			projectId: "flickz-91f5b",
+			storageBucket: "flickz-91f5b.appspot.com",
+			messagingSenderId: "340998144710",
+			appId: "1:340998144710:web:4cff3e0082353afbd50dc7"
+		};
+		
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		var db = firebase.firestore();
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			let userId = document.cookie;
+			console.log(userId, 'userId');
+			if (userId) {
+				$('#fh5co-counter').hide();
+				$('#fh5co-couple-story').show();
+				db.collection('dansala').doc(userId).onSnapshot((docRef) => {
+					// var owlStage = document.getElementById("carooo");
+					// var owlIndicaters = document.getElementById("carooo_indicaters");
+					var i = 0;
+					console.log(docRef.data().name, 'querySnapshot');
+					$("#name_test").val(docRef.data().name);
+					$("#cus_name").html(`Hi, ${docRef.data().name}`);
+					if(docRef.data().status){
+						$('#accepted').show();
+						$('#pending').hide();
+
+					}else{
+						$('#pending').show();
+						$('#accepted').hide();
+
+					}
+				});
+
+			}
+		});
+
+</script>
+	<script>
+
+		db.collection("dansala").where("status", "==", true).onSnapshot((querySnapshot) => {
+
+			var owlStage = document.getElementById("carooo");
+			var owlIndicaters = document.getElementById("carooo_indicaters");
+			var i = 0;
+			querySnapshot.forEach((doc) => {
+
+				//upper part
+				console.log(`${doc.id} => ${doc.data().name}`);
+
+				var starDiv = document.createElement("div");
+				for (let index = 0; index < doc.data().rating; index++) {
+					var istar = document.createElement("i");
+					istar.setAttribute("class", "fa fa-star istar");
+					starDiv.appendChild(istar);
+
+				}
+				for (let index = doc.data().rating; index < 5; index++) {
+					var istar = document.createElement("i");
+					istar.setAttribute("class", "far fa-star istar");
+					starDiv.appendChild(istar);
+
+				}
+
+
+				var small = document.createElement("small");
+				small.setAttribute("class", "test_name")
+				small.appendChild(document.createTextNode(doc.data().cameFrom));
+
+				var p = document.createElement("p");
+				p.appendChild(document.createTextNode(doc.data().name));
+
+				var div6 = document.createElement("div");
+				div6.setAttribute("class", "col-sm-8 col-sm-offset-2");
+				div6.appendChild(p);
+				div6.appendChild(small);
+				div6.appendChild(starDiv);
+
+				var div5 = document.createElement("div");
+				div5.setAttribute("class", "row");
+				div5.appendChild(div6);
+
+				var blockquote = document.createElement("blockquote");
+				blockquote.appendChild(div5);
+				if (i == 0) {
+					var div3 = document.createElement("div");
+					div3.setAttribute("class", "item active");
+					div3.appendChild(blockquote);
+				} else {
+					var div3 = document.createElement("div");
+					div3.setAttribute("class", "item ");
+					div3.appendChild(blockquote);
+
+				}
+				owlStage.appendChild(div3);
+
+				//Indicaters
+
+				if (i == 0) {
+					var li = document.createElement("li");
+					li.setAttribute("data-target", "#quote-carousel");
+					li.setAttribute("class", "active");
+					li.setAttribute("data-slide-to", i);
+				} else {
+					var li = document.createElement("li");
+					li.setAttribute("data-target", "#quote-carousel");
+					li.setAttribute("data-slide-to", i);
+
+				}
+
+				owlIndicaters.appendChild(li);
+
+				i++;
+			});
+
+
+
+
+
+		});
+		/* 1. Visualizing things on Hover - See next part for action on click */
+		$('#stars li').on('mouseover', function () {
+			var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+
+			// Now highlight all the stars that's not after the current hovered star
+			$(this).parent().children('li.star').each(function (e) {
+				if (e < onStar) {
+					$(this).addClass('hover');
+				} else {
+					$(this).removeClass('hover');
+				}
+			});
+
+		}).on('mouseout', function () {
+			$(this).parent().children('li.star').each(function (e) {
+				$(this).removeClass('hover');
+			});
+		});
+
+		/* 2. Action to perform on click */
+
+		$('#stars li').on('click', function () {
+			var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+			//clicked value
+			var stars = $(this).parent().children('li.star');
+			//previous clicked value
+			var preStars = document.getElementById("rate_test").value;
+
+			if (onStar == preStars) {
+				for (i = 0; i < onStar; i++) {
+					$(stars[i]).removeClass('selected');
+					$(stars[i]).removeClass('hover');
+				}
+
+			} else {
+				for (i = 0; i < stars.length; i++) {
+					$(stars[i]).removeClass('selected');
+				}
+
+				for (i = 0; i < onStar; i++) {
+					$(stars[i]).addClass('selected');
+				}
+
+			}
+			// JUST RESPONSE (Not needed)
+			var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+
+			$('#rate_test').val(ratingValue);
+
+		});
+
+		$('#testimonialForm').on('submit', function (e) {
+
+			e.preventDefault();
+			var name = $("#name_test").val();
+			var mobile = $("#mobile_test").val();
+			var members = $("#members_test").val();
+			var cameFrom = $("#came_test").val();
+
+			db.collection("dansala").add({
+				name: name,
+				mobile: mobile,
+				members: members,
+				cameFrom: cameFrom,
+				status: false,
+			})
+				.then((docRef) => {
+					console.log("Document written with ID: ", docRef.id);
+					document.cookie = `${docRef.id}; expires= 5 Jun 2023, 07:53:08UTC; path=/`;
+				})
+				.catch((error) => {
+					console.error("Error adding document: ", error);
+				});
+		});
+
+
+	</script>
+
+</body>
+
+</html>
