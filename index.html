@@ -164,7 +164,7 @@
 			font-size: larger;
 			color: black;
 		}
-		
+
 		.item blockquote {
 			border-left: none;
 			margin: 0;
@@ -378,7 +378,7 @@
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<span>ඔබගේ ඉල්ලීම ඉදිරිපත් කර ඇත</span>
 						<h2 id="cus_name">Hi, </h2>
-						<p>If your status is green, Please visit the counter, if not your patience is highly appreciated
+						<p>තිරය තුල දිස්වන්නෙ "පිලිගන්නා ලදි" යනුවෙන් නම් කරුණාකර ඉදිරිපස කවුන්ටරය ඇති ස්ථානයට පැමිණෙන්න.
 						</p>
 					</div>
 				</div>
@@ -613,14 +613,13 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 			let userId = document.cookie;
-			console.log(userId, 'userId');
 			if (userId) {
 				$('#fh5co-counter').hide();
 				$('#fh5co-couple').hide();
 				$('#fh5co-couple-story').show();
 				db.collection('dansala').doc(userId).onSnapshot((docRef) => {
-					console.log(docRef.data().name, 'querySnapshot');
-					$("#cus_name").html(`Hi, ${docRef.data().name}`);
+					if(docRef?.data()?.name){
+						$("#cus_name").html(`Hi, ${docRef.data().name}`);
 					if (docRef.data().status) {
 						$('#accepted').show();
 						$('#pending').hide();
@@ -628,6 +627,11 @@
 						$('#pending').show();
 						$('#accepted').hide();
 					}
+					}else{
+						document.cookie = `${userId}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+						location.reload()
+					}
+					
 				});
 			}
 		});
