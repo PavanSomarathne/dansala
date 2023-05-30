@@ -159,6 +159,12 @@
 			font-weight: bold;
 		}
 
+		#goNext {
+			padding-inline: 20px;
+			font-size: larger;
+			color: black;
+		}
+		
 		.item blockquote {
 			border-left: none;
 			margin: 0;
@@ -439,20 +445,9 @@
 											</tr> -->
 										</tbody>
 									</table>
-									<!-- <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-							
-										<div class="carousel-inner text-center" id="carooo">
-										</div>
-							
-										<ol class="carousel-indicators" id="carooo_indicaters">
-										</ol>
-									</div> -->
 								</div>
-
 							</div>
-
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -559,8 +554,6 @@
 			document.removeEventListener('click', musicPlay);
 		}
 
-
-
 	</script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
 	<script src="./js/petals.js"></script>
@@ -641,58 +634,42 @@
 
 	</script>
 	<script>
-
 		db.collection("dansala").where("status", "==", true).onSnapshot(async (querySnapshot) => {
-
-			// $("#table_winners tr").remove();
-			// deleteRow(2) 
-			// location.reload();
-			
-			
 			createTable(querySnapshot);
-			
 		});
 
 		async function createTable(querySnapshot) {
+			let table = document.getElementById("table_winners");
+			let totalRowCount = table.rows.length;
 			let i = 0;
 			await querySnapshot.forEach((doc) => {
-				addNewRow(doc.data(),i)
+				addNewRow(doc.data(), i)
 				i++;
-
 			});
-			let table1 = document.getElementById("table_winners");
-			let totalRowCount = table1.rows.length;
-			console.log(totalRowCount - 1,'11111111',querySnapshot.docs.length);
+
 			if (totalRowCount - 1 > querySnapshot.docs.length) {
-				for (let index = totalRowCount-1; index > querySnapshot.docs.length; index--) {
-					let table2 = document.getElementById("table_winners");
-					let totalRowCount1 = table2.rows.length;
-					console.log(index,totalRowCount1,'222');
-					table2.deleteRow(index);
+				for (let index = totalRowCount - 1; index > querySnapshot.docs.length; index--) {
+					table.deleteRow(index);
 				}
 			}
-			
 		}
+
 		function addNewRow(doc, y) {
-				var table = document.getElementById("table_winners");
-				var cellCount = 3;
+			var table = document.getElementById("table_winners");
+			var cellCount = 3;
 
-
-				var row = table.insertRow(y + 1);
-				for (var i = 0; i < cellCount; i++) {
-					var cell = row.insertCell(i);
-					if (i == 0) {
-						cell.innerHTML = y + 1
-					} else if (i == 1) {
-						cell.innerHTML = doc.name
-					} else {
-						cell.innerHTML = doc.cameFrom
-					}
+			var row = table.insertRow(y + 1);
+			for (var i = 0; i < cellCount; i++) {
+				var cell = row.insertCell(i);
+				if (i == 0) {
+					cell.innerHTML = y + 1
+				} else if (i == 1) {
+					cell.innerHTML = doc.name
+				} else {
+					cell.innerHTML = doc.cameFrom
 				}
-
-
-
 			}
+		}
 		$(document).ready(function () {
 			db.collection('status').doc('rZbGFU7x0rdHelCaLlva').onSnapshot((docRef) => {
 				$("#dansal-stat-text").html(docRef.data().text);
@@ -732,7 +709,6 @@
 					console.error("Error adding document: ", error);
 				});
 		});
-
 
 	</script>
 
