@@ -699,7 +699,7 @@
 				members: members,
 				cameFrom: cameFrom,
 				status: false,
-				created: firebase.database.ServerValue.TIMESTAMP 
+				created: firebase.firestore.Timestamp.now(),
 			})
 				.then((docRef) => {
 					console.log("Document written with ID: ", docRef.id);
