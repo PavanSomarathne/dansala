@@ -695,10 +695,11 @@
 
 			db.collection("dansala").add({
 				name: name,
-				mobile: "",
+				mobile: mobile,
 				members: members,
 				cameFrom: cameFrom,
 				status: false,
+				created: firebase.database.ServerValue.TIMESTAMP 
 			})
 				.then((docRef) => {
 					console.log("Document written with ID: ", docRef.id);
