@@ -648,7 +648,7 @@
 						$('#accepted').hide();
 					}
 					}else{
-						document.cookie = `${userId}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+						setCookie("user", `${docRef.id}`, -4);
 						location.reload()
 					}
 					
