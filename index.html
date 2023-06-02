@@ -551,6 +551,28 @@
 			document.getElementById('music').volume = 0.4;
 			document.removeEventListener('click', musicPlay);
 		}
+		function setCookie(cname, cvalue, exdays) {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+
+			function getCookie(cname) {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
 
 	</script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
@@ -610,7 +632,7 @@
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			let userId = document.cookie;
+			let userId = getCookie("user");
 			if (userId) {
 				$('#fh5co-counter').hide();
 				$('#fh5co-couple').hide();
@@ -626,7 +648,7 @@
 						$('#accepted').hide();
 					}
 					}else{
-						document.cookie = `${userId}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/dansala/`;
+						document.cookie = `${userId}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
 						location.reload()
 					}
 					
@@ -684,7 +706,7 @@
 				}
 			});
 		});
-
+		
 		$('#testimonialForm').on('submit', function (e) {
 
 			e.preventDefault();
@@ -703,7 +725,7 @@
 			})
 				.then((docRef) => {
 					console.log("Document written with ID: ", docRef.id);
-					document.cookie = `${docRef.id}; expires=Tue, 06 June 2023 13:14:05 GMT; path=/`;
+					setCookie("user", `${docRef.id}`, 4);
 					$('html, body').animate({
 						scrollTop: $("#fh5co-couple").offset().top
 					}, 300, () => location.reload());
